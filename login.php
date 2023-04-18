@@ -26,7 +26,10 @@
     // $data->bindParam("p", $_POST["psw"]);
     $data->execute();
     if ($data->rowCount() ==1) {
-        header("location:admin/", true);}
+        header("location:admin/", true);
+    session_start();
+    $_SESSION["role"]="ADMIN";
+    }
         
         else{
             echo "<div class='alert alert-danger  text-center'>wrong email or password</div>";}

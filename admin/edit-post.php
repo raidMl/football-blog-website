@@ -14,21 +14,24 @@
 <link rel="shortcut icon" href="../img/esss.png">
 </head>
 <body>
-<?php require_once"nav-bar.php";?>
- 
-
-<div class='alert alert-success w-100 text-center' style="font-size:24px; font-weight:500;">
-<i class="fa fa-bars" style="position: absolute;left:30px;font-size:30px; cursor:pointer;" onclick="show_nav_bar()"></i>
-
-Edit post</div>
-
-<section>
-    <form method="POST" action="edit-post.php" enctype="multipart/form-data">
-    <div class="container mt-5 ">
-<?php 
+<?php require_once"nav-bar.php";
 require_once "../dbconect.php";
 session_start();
+if ($_SESSION["role"]==="ADMIN"){
+
 if (isset($_SESSION["cle"])) {
+
+ 
+
+echo'<div class="alert alert-success w-100 text-center" style="font-size:24px; font-weight:500;">
+<i class="fa fa-bars" style="position: absolute;left:30px;font-size:30px; cursor:pointer;" onclick="show_nav_bar()"></i>
+
+Edit post</div>';
+
+echo '<section>
+    <form method="POST" action="edit-post.php" enctype="multipart/form-data">
+    <div class="container mt-5 ">';
+
 $cle=$_SESSION["cle"];
 // var_dump($cle);
 $data=$database->prepare("SELECT * FROM articles WHERE id=:clee");
@@ -88,6 +91,8 @@ else{
     </div>";}
 
 echo "</div>";
+}}
+else{    header("location:../", true);
 }
 ?>
 

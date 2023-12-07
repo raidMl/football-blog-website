@@ -22,11 +22,14 @@
     $data->bindParam("m", $_POST["email"]);
     $passuser = sha1($_POST["psw"]);
     $data->bindParam("p", $passuser);
-    // echo(sha1("ess1958"));
+     echo(sha1("ess1958"));
     // $data->bindParam("p", $_POST["psw"]);
     $data->execute();
     if ($data->rowCount() ==1) {
-        header("location:admin/", true);}
+        header("location:admin/", true);
+    session_start();
+    $_SESSION["role"]="ADMIN";
+    }
         
         else{
             echo "<div class='alert alert-danger  text-center'>wrong email or password</div>";}

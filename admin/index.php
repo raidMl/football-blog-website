@@ -19,28 +19,33 @@ animation: .5s;}
 </style>
 </head>
 <body>
-    <?php require_once"nav-bar.php";?>
+    <?php 
+    session_start();
+    if (isset($_SESSION["role"])){
 
-<div class='alert alert-success w-100 text-center '>
+    if ($_SESSION["role"]==="ADMIN"){
+    require_once"nav-bar.php";
+
+echo '<div class="alert alert-success w-100 text-center">
 <i class="fa fa-bars" style="position: absolute;left:30px;font-size:30px; cursor:pointer;" onclick="show_nav_bar()"></i>
 login with sucess</div>
-
-<section>
+';
+echo '<section>
    
     <div class="container text-center">
     <h3>welcome admin</h3>
 <div class="row mt-5 text-center" style="display: inline">
-<form method="$_GET" action="index.php">
+<form method='."GET".' action='."index.php" .'>
 
-<a class="box  btn btn-success" href="create-post.php"><i class="fas fa-plus-circle"></i> Add post</a>
+<button class="box  btn btn-success"  name="add"><i class="fas fa-plus-circle"></i> Add post</button>
 <button type="submit"   name="edit" class="box  btn btn-primary"><i class="fas fa-edit"></i> Edit post</button>
 </form>
 </div>
 
     </div>
 
-</section>
-<?php
+</section>';
+
 echo "<div class='container'>";
   require_once "../dbconect.php";
 
@@ -107,6 +112,23 @@ if (isset($_GET["modify"])) {
 header("location:edit-post.php");
     
     }
+  
+//   //add transfer to create-post.php 
+if (isset($_GET["add"])) {
+  session_start();
+  $_SESSION["role"]="ADMIN";
+  header("location:create-post.php");
+  
+  }
+
+}
+  
+  }
+  else{ 
+    header("location:../", true);
+
+  }
+  
 
 ?>
 </body>

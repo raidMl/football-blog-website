@@ -2,10 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="calcule la moyenne pour cem lycée et université,حاسب المعدل للمتوسط الثانوي ةالجامعي ">
-    <meta name="keywords" content="moyen,moyenne,université,fa-university,calc,calculator,moyen calculator,mo3adle,module,dz,learn,education,
-    rate,lycée,high school,cem,secodary school,student,eleve,ecole ,calculate,معدل ,مادة,متوسط,معدلي
-    ,ثانوي,حساب المعدل,جامعي,كيف,حاسب المعدل,موقع لحساب المعدل,الجزائر,التلميذ,الطلبة,الدراسة,المواد الدراسبة,وزارة التعليم,علم,تعلم,المعدل الفصلي,">
+    <meta name="description" content="website for entent sportif de setif  ">
+    <meta name="keywords" content="ess, blog entent sportif de setif">
     <meta name="author" content="Raid_dev">
 
 
@@ -28,7 +26,7 @@
 <body id="bd">
    
 <!-- ***** Preloader Start ***** -->
-<!-- <div id="js-preloader" class="js-preloader">
+<div id="js-preloader" class="js-preloader">
   <div class="preloader-inner">
     <span class="dot"></span>
     <div class="dots">
@@ -37,7 +35,7 @@
       <span></span>
     </div>
   </div>
-</div> -->
+</div>
 <!-- ***** Preloader End ***** -->
 
 
@@ -364,7 +362,7 @@ echo'<div class=" col-md-3 col-sm-5  col-xs-8 align-self-center card" >
 <h2 class="text-center mb-5 mt-5 text-secondary " id="partners"  style="position: relative;">Our Partners</h2>
 <!-- <<h2 class="text-center mb-5 mt-5 text-secondary "  style="position: relative;">Taper votre notes</h2> -->
 <div  class="container text-center">
-<img src="img/gica.jpg"> &ensp;&ensp;
+<img src="img/sonalgaz.jpg"> &ensp;&ensp;
 <img src="img/download.png" height="110px">
 </div>
 

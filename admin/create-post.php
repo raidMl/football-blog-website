@@ -14,7 +14,13 @@
 <link rel="shortcut icon" href="../img/esss.png">
 </head>
 <body>
-<?php require_once"nav-bar.php";?>
+<?php     session_start();
+require_once"nav-bar.php";
+if($_SESSION["role"]!="ADMIN"){
+     header("location:../", true);
+
+}
+?>
 
 
 <div class='alert alert-success w-100 text-center' style="font-size:24px; font-weight:500;">

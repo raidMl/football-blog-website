@@ -16,7 +16,7 @@ if (isset($_GET["logout"])){
     session_start();
     echo '<h1> raid'. $_SESSION["cle"].'</h1>';
     unset($_SESSION["cle"]);
-  
+    unset($_SESSION["role"]);
     header("location:../index.php");  }  ?>
 
     <div class="active"></div>
